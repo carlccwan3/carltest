@@ -22,7 +22,7 @@
 @section('scripts')
     <script src="//nos.netease.com/vod163/nep.min.js"></script>
     <script>
-      var myPlayer = neplayer("my-video", [initOptions], [ready]);
+      var myPlayer = neplayer("my-video");
       myPlayer.setDataSource({
         type: "rtmp/flv",
         src: "rtmp://v1f40a35d.live.126.net/live/8d17f5a4fac041629029e291673068fb"
