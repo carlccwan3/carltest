@@ -58,14 +58,6 @@
             bitrate    : 600,       // Number 可选 推流码率 default 600
             video      : true,       // Boolean 可选 是否推流视频 default true
             audio      : true       // Boolean 可选 是否推流音频 default true
-          }, function (code, desc) {
-                    /*
-                     function 可选 推流过程中发生错误进行回调
-                    @param code 错误代码
-                    @param desc 错误信息
-                     判断是否有错误代码传入推流过程中是否发生错误
-                     若有错误可进行相应的错误提示
-                     */
           });
       });
 
