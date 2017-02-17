@@ -7,10 +7,12 @@
                     <div class="panel-heading">Online Broadcast System</div>
 
                     <div class="panel-body">
-                        <button id="displayStream">BroadCasting</button>
-                        <button id="stopStream">Stop</button>
+                        <button id="displayStream">Start BroadCasting</button>
+                        <button id="stopStream" style="display: none">Stop</button>
                     </div>
                     <div class="panel-body">
+                        <p style="text-align: right" id="previewing">Previewing</p>
+                        <p style="text-align: right; display: none; color:blue" id="broadcasting">Broadcasting</p>
                         <div id="my-publisher"></div>
                     </div>
                 </div>
@@ -59,10 +61,19 @@
             video      : true,       // Boolean 可选 是否推流视频 default true
             audio      : true       // Boolean 可选 是否推流音频 default true
           });
+        $this = $("#displayStream");
+        $this.css('color','blue');
+        $this.attr('disabled','disabled');
+        $("#stopStream").show();
+
+        $("#previewing").hide();
+        $("#broadcasting").show();
+
       });
 
       $("#stopStream").click(function () {
         myPublisher.stopPublish();
+        window.location.href = '/';
       });
     </script>
 @endsection
