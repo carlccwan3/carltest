@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Online Broadcast System</div>
                 <div class="panel-body">
-                    <video id="my-video" class="video-js" x-webkit-airplay="allow" webkit-playsinline controls poster="poster.png" preload="auto" width="640" height="360" data-setup="{}">
+                    <video id="my-video" class="video-js" x-webkit-airplay="allow" webkit-playsinline controls poster="poster.png" preload="auto" width="720" height="400" data-setup="{}">
                         <source src="RTMP-FLV.flv" type="rtmp/flv">
                     </video>
                 </div>

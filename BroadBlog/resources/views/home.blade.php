@@ -7,12 +7,17 @@
                     <div class="panel-heading">Online Broadcast System</div>
 
                     <div class="panel-body">
-                        <button id="displayStream">Start BroadCasting</button>
-                        <button id="stopStream" style="display: none">Stop</button>
+                        <div class="col-md-6 col-lg-6" style="padding-left:0px;">
+                            <button id="displayStream">Start BroadCasting</button>
+                            <button id="stopStream" style="display: none">Stop</button>
+                        </div>
+                        <div class="col-md-6 col-lg-6" style="padding-right:0px;">
+                            <p style="text-align: right" id="previewing">Previewing</p>
+                            <p style="text-align: right; display: none; color:blue" id="broadcasting">Broadcasting</p>
+                        </div>
+
                     </div>
                     <div class="panel-body">
-                        <p style="text-align: right" id="previewing">Previewing</p>
-                        <p style="text-align: right; display: none; color:blue" id="broadcasting">Broadcasting</p>
                         <div id="my-publisher"></div>
                     </div>
                 </div>
