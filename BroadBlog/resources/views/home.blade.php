@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Online Broadcast System</div>
+                    <div class="panel-heading">Online Testing System</div>
 
                     <div class="panel-body">
                         <div class="col-md-6 col-lg-6" style="padding-left:0px;">
-                            <button id="displayStream">Start BroadCasting</button>
-                            <button id="stopStream" style="display: none">Stop</button>
+                            <button id="displayStream">Start Webcast</button>
+                            <button id="stopStream" style="display: none">Stop Webcast</button>
                         </div>
                         <div class="col-md-6 col-lg-6" style="padding-right:0px;">
-                            <p style="text-align: right" id="previewing">Previewing</p>
-                            <p style="text-align: right; display: none; color:blue" id="broadcasting">Broadcasting</p>
+                            <p style="text-align: right" id="previewing">Please allow camera and microphone access!</p>
+                            <p style="text-align: right; display: none; color:blue" id="broadcasting">Your are in Webcasting status now</p>
                         </div>
 
                     </div>
@@ -66,9 +66,8 @@
             video      : true,       // Boolean 可选 是否推流视频 default true
             audio      : true       // Boolean 可选 是否推流音频 default true
           });
-        $this = $("#displayStream");
-        $this.css('color','blue');
-        $this.attr('disabled','disabled');
+
+        $("#displayStream").hide();		
         $("#stopStream").show();
 
         $("#previewing").hide();
@@ -78,7 +77,7 @@
 
       $("#stopStream").click(function () {
         myPublisher.stopPublish();
-        window.location.href = '/';
+        window.location.href = '/home';
       });
     </script>
 @endsection
